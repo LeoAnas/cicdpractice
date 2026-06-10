@@ -1,0 +1,25 @@
+on:
+  push:
+    branches:
+      - main
+      - "release/**"
+    
+    paths:
+      - "src/**"
+      - "tests/**"
+    
+  pull_requests:
+    branches:
+      - main
+      - "release/**"
+
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v6
+    
+    - name: Run tests
+      run: pip install pytest
