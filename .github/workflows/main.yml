@@ -22,6 +22,9 @@ jobs:
   Test:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/Checkout@v4
+        
       - name: Installing Python
         uses: actions/setup-python@v5
         with:
