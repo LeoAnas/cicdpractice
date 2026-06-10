@@ -13,16 +13,16 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "starting job ${{github.job}}"
+      - run: echo "starting job ${{github.job}} at environment ${{inputs.environment}}"
 
   job2:
      runs-on: ubuntu-latest
      steps:
-     - run: echo "starting job ${{github.job}}"
+     - run: echo "starting job ${{github.job}} at environment ${{inputs.environment}}"
   job3:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "starting job ${{github.job}}"
+      - run: echo "starting job ${{github.job}} at environment ${{inputs.environment}}"
 
   job4:
     needs:
@@ -30,7 +30,7 @@ jobs:
       - job3
     runs-on: ubuntu-latest
     steps:
-      - run: echo "starting job ${{github.job}}"
+      - run: echo "starting job ${{github.job}} at environment ${{inputs.environment}} "
 
      
       
