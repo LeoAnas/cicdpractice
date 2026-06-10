@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: List All Files
-        run: ls - la
+        run: ls -a 
 
   Test:
     runs-on: ubuntu-latest
