@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/Checkout@v4
+        uses: actions/checkout@v4
 
       - name: Installing Python
         uses: actions/setup-python@v5
@@ -35,9 +35,10 @@ jobs:
         run: pip install -r requirements.txt
       
       - name: Run Linting
-        steps:
-          - run: ruff check .
-          - run: ruff format --check .
+        run: ruff check .
+
+      - name: Ruff Format
+        run: ruff format --check .
         
       - name: Run Tests 
         working-directory: src
