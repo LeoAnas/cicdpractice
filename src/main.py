@@ -4,3 +4,6 @@ def hello(name):
 
 if __name__=="__main__":
     print(hello("Anas"))
+    
+
+#PRINT LEARNING
