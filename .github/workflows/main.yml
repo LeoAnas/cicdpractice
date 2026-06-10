@@ -37,7 +37,9 @@ jobs:
       - name: Run Linting
         run: ruff check .
 
-      - name: Ruff Format
+      - name: Ruff format
+        run: ruff format .
+      - name: Ruff Format check
         run: ruff format --check .
         
       - name: Run Tests 
