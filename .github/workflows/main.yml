@@ -10,7 +10,7 @@ on:
 
 
 jobs:
-  Checkout&List:
+  CheckoutAndList:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
