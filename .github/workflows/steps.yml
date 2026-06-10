@@ -1,0 +1,37 @@
+on: 
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: enter your environment
+        required: true
+        type: choice
+        options:
+          - staging
+          - production
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "starting job ${{github.job}}"
+
+  job2:
+     runs-on: ubuntu-latest
+     steps:
+     - run: echo "starting job ${{github.job}}"
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "starting job ${{github.job}}"
+
+  job4:
+    needs:
+      - job2
+      - job3
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "starting job ${{github.job}}"
+
+     
+      
+          
